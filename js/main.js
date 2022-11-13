@@ -144,7 +144,7 @@ let app = new Vue({
       return count
       },
       favoriteTaste() {
-        let max='barhat'
+        let max='nikak'
         for(let i in this.totalGame) {
           if(this.totalGame[i]>this.totalGame[max]) {
             max=i
