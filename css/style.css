@@ -1,0 +1,291 @@
+@font-face {
+    font-family: "Forum";
+    src: url(../fonts/Forum-Regular.ttf);
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Forum", sans-serif;
+}
+i.fa {
+    font-size: 50px;
+    color: #913c7a;
+    margin-right: 10px;
+}
+.main {
+    background-image: url(../img/background__main.jpg);
+    background-repeat: repeat-x;
+    animation: slide 30s linear infinite;
+}
+@keyframes slide {
+    0% {
+      background-position: 0% 0%;  
+    }
+    50% {
+        background-position: 100% 0%;  
+      }
+    100% {
+        background-position: 0% 0%;  
+      }
+}
+.app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.app__header {
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 7px solid #fdb54d;
+    min-height: 247px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px;
+}
+.app__logo {
+    padding: 20px 0;
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+}
+.app__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    overflow: auto;
+}
+.app__btn {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px;
+    width: 240px;
+    background-color: #e284ff;
+    box-shadow: 0px 7px 0px 0px #cd64ec;
+    margin: 0 auto;
+    border-radius: 35px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 20px;
+    color: #000;
+    text-transform: uppercase;
+}
+.app__btn:focus {
+    outline: none;
+    background-color: #cd64ec;
+    box-shadow: 0px 7px 0px 0px #9044a7;
+}
+.achievements .app__body {
+    justify-content: flex-start;
+}
+.app__body-inner {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    color: #000;
+    font-size: 20px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+.app__body-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 24px;
+    background-color: rgba(255, 255, 255, 0.795);
+    padding: 20px 10px;
+    border: 7px solid #fdb54d;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.app__body-top {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: max-content;
+    place-content: center center;
+    margin-bottom: 20px;
+}
+.app__card {
+    background-color: rgba(255, 255, 255, 0.836);
+    padding: 20px 10px;
+    border: 5px solid rgba(224, 63, 224, 0.5);
+    text-align: center;
+}
+.app__card:nth-child(1) {
+    border-right: none;
+    border-bottom: none;
+}
+.app__card:nth-child(2) {
+    border-left: none;
+    border-bottom: none;
+}
+.app__card:nth-child(3) {
+    border-right: none;
+    border-top: none;
+}
+.app__card:nth-child(4) {
+    border-left: none;
+    border-top: none;
+}
+.app__card-text {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.app__card-count {
+    font-size: 18px;
+}
+.app__body-middle {
+    margin-bottom: 15px;
+}
+.app_result {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border: 5px solid rgba(224, 63, 224, 0.5);
+    background-color: rgba(224, 63, 224, 0.5);
+    margin-bottom: 7px;
+}
+.app_result:last-child {
+    margin-bottom: 0;
+}
+i.fa-star {
+    margin-right: 0;
+    font-size: 17px;
+    margin-bottom: 3px;
+}
+.app__result-name {
+    font-size: 22px;
+    font-weight: 900;
+    margin-left: auto;
+    margin-right: 30px;
+    text-align: center;
+    color:#000000;
+}
+.app__result-amount {
+    font-size: 19px;
+    font-weight: bold;
+}
+.app__result-count {
+    font-size: 17px;
+}
+.btn__back {
+    width: 70px;
+    height: 70px;
+    box-shadow: none;
+    border-radius: 50%;
+}
+.btn_achievement {
+    background-color: #fdb54d;
+    border: 5px solid #ffa528;
+}
+.app__header-inner {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 900;
+}
+.app__count {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+.app__text {
+    font-size: 24px;
+}
+.results .app__body {
+    justify-content: space-between;
+}
+.app__results-inner {
+    color: #fff;
+    padding: 20px;
+}
+.results__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    background-color: rgba(0,0,0,0.5);
+    border-bottom: 7px solid #fdb54d;
+}
+.results__img {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.results__img img {
+    width: 210px;
+    border-radius: 20px;
+}
+.results__text-box {
+    margin-bottom: 20px;
+    font-size: 23px;
+    text-align: center;
+    line-height: 20px;
+    background-color: rgba(0,0,0,0.5);
+}
+.results__text {
+    margin-bottom: 20px;
+}
+.app.results {
+    animation: none;
+    background-size: cover;
+    background-position: center center;
+}
+.app.results[data-taste="barhat"] {
+    background-image: url(../img/barhat_bg.png);
+}
+.app.results[data-taste="alasnick"] {
+    background-image: url(../img/alasnick_bg.png);
+}
+.app.results[data-taste="limonmak"] {
+    background-image: url(../img/limonmak_bg.png);
+}
+.app.results[data-taste="morkov"] {
+    background-image: url(../img/morkov_bg.png);
+}
+.app.results[data-taste="yablkor"] {
+    background-image: url(../img/yablkor_bg.png);
+}
+.app.results[data-taste="pryanaya"] {
+    background-image: url(../img/pryanaya_bg.png);
+}
+.app.results[data-taste="nikak"] {
+    background-image: url(../img/background__main.jpg);
+}
+.btn__barhat {
+    background-color: #fa6e71;
+    border: 5px solid rgba(199, 101, 101, 0.5);
+}
+.btn__alasnick {
+    background-color: #5a3f3f;
+    border: 5px solid rgba(41, 25, 25, 0.5);
+}
+.btn__limonmak {
+    background-color: #fbffc4;
+    border: 5px solid rgba(201, 198, 61, 0.5);
+}
+.btn__morkov {
+    background-color: #ffdcae;
+    border: 5px solid rgba(204, 156, 67, 0.5);
+}
+.btn__yablkor {
+    background-color: #d7ffc4;
+    border: 5px solid rgba(104, 199, 101, 0.5);
+}
+.btn__pryanaya {
+    background-color: #ffc4c5;
+    border: 5px solid rgba(199, 116, 101, 0.5);
+}
+.btn__nikak {
+    background-color: #ffc4c5;
+    border: 5px solid rgba(255, 0, 0, 0.5);
+}
