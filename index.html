@@ -137,5 +137,36 @@
     <script src="js/vue.js"></script>
     <script src="js/const.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+    <script>
+        // Отправляет событие инициализации нативному клиенту
+        vkBridge.send('VKWebAppInit');
+      </script>
+      <script>
+      // Подписывается на события, отправленные нативным клиентом
+      bridge.subscribe((e) => console.log(e)); 
+          
+      // Отправляет событие нативному клиенту
+      bridge.send("VKWebAppInit", {});      
+          
+      // Проверяет, поддерживается ли событие на текущей платформе
+      if (bridge.supports("VKWebAppResizeWindow")) {
+        bridge.send("VKWebAppResizeWindow", {"width": 800, "height": 1000});
+      }
+      bridge.send('VKWebAppGetEmail')
+        .then((data) => {
+         if (data.result) {
+         // Обработка события в случае успеха
+         console.log(data.email);
+         } else {
+         // Ошибка
+         }
+        })
+        .catch((error) => {
+            // Обработка события в случае ошибки
+            console.log(error);
+        });
+      </script>
+      <script src="/MINI_APP_TORTIK/index.js"></script>
 </body>
 </html>
